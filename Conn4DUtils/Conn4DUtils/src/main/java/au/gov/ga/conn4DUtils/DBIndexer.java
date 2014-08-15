@@ -119,7 +119,7 @@ public class DBIndexer extends DBProcessTableSet {
 			long t1 = System.currentTimeMillis();
 			stmt.execute(s);
 			long t2 = System.currentTimeMillis();
-			System.out.printf("\t%-50s%-30s(%-15s)%n",table + "_" + field2 + " created.",new Date(System.currentTimeMillis()), TimeConvert.millisToString(t2 - t1));
+			System.out.printf("\t%-50s%-30s%-15s%n",table + "_" + field2 + " created.",new Date(System.currentTimeMillis()), "(" + TimeConvert.millisToString(t2 - t1) + ")");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -150,8 +150,7 @@ public class DBIndexer extends DBProcessTableSet {
 			stmt.execute(s);
 			long t2 = System.currentTimeMillis();
 			;
-			System.out.println("\t" + table + "_" + field2 + " created.\t("
-					+ TimeConvert.millisToString(t2 - t1) + ")");
+			System.out.printf("\t%-50s%-30s%-15s%n",table + "_" + field2 + " created.",new Date(System.currentTimeMillis()), "(" + TimeConvert.millisToString(t2 - t1) + ")");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

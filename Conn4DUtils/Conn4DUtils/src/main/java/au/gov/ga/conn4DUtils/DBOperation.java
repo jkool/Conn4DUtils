@@ -27,7 +27,7 @@ public class DBOperation {
 	// private String conString =
 	// "jdbc:postgresql://pdb7.anu.edu.au/dh8_connectivity";
 	private String conString = "jdbc:postgresql://127.0.0.1/dh8_connectivity";
-	private String username = "username";
+	private String username = "user";
 	private char[] password = "password".toCharArray();
 
 	protected static ArrayList<String> depthvals = new ArrayList<String>();
@@ -109,9 +109,6 @@ public class DBOperation {
 
 		try {
 			Class.forName(driver);
-
-			// conn = DriverManager.getConnection(conString, "u83869",
-			// "<password here>");
 
 			conn = DriverManager.getConnection(conString, username,
 					String.valueOf(password));

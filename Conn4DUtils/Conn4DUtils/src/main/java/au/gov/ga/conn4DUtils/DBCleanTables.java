@@ -12,7 +12,7 @@ public class DBCleanTables extends DBProcessTableSet {
 		dct.connect();
 		// ddt.batchProcess("^nw_2.*d(2[1-9]|3[0-1])$");
 		//dct.batchProcess("^nw_.*d\\d{1,2}$");
-		dct.batchProcess("^sw_2012.*");
+		dct.batchProcess("^sw_2011_11.*");
 		//dct.batchProcess("^sw_2011.*");
 		//dct.batchProcess("^sw_2010_(0[7-9]|1[0-2]).*");
 		//dct.batchProcess("^sw_2010_07_25d([2-9]|2[0-9]|3[0-1])$");

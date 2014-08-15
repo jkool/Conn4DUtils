@@ -9,7 +9,7 @@ public class DBDropTables extends DBProcessTableSet{
 		DBDropTables ddt = new DBDropTables();
 		ddt.connect();
 		//ddt.batchProcess("^nw_2.*d(2[1-9]|3[0-1])$");
-		ddt.batchProcessViews("^n_.*_kef_start$");
+		ddt.batchProcess("^sw_2012.*");
 		ddt.close();
 		System.out.println("Complete");
 	}
@@ -24,6 +24,7 @@ public class DBDropTables extends DBProcessTableSet{
 		//System.out.println("\tDropping table...\t\t(" + new Date(System.currentTimeMillis())+")");
 		//System.out.println("\tRenaming table to "+"nw_"+name.substring(1)+"...\t\t(" + new Date(System.currentTimeMillis())+")");
 		//stmt.execute("DROP VIEW " + name);
+		//stmt.execute("DROP TABLE " + name + " CASCADE");
 		//if(!indexExists(name,name + "_pkey")){
 			//System.out.println("OK");
 			//stmt.execute("ALTER TABLE " + name + " ADD PRIMARY KEY(source,id,time_)");
